@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'IBM Plex Sans', 'IBM Plex Sans Arabic', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-sans);
+}
+
+@layer base {
+  :root {
+    --bg-color: #C8E3FA;
+    --text-color: #0D1117;
+    --muted-color: rgba(13, 17, 23, 0.62);
+    --border-color: rgba(13, 17, 23, 0.11);
+    --crosshair-color: rgba(13, 17, 23, 0.36);
+    --surface-tint: rgba(13, 17, 23, 0.04);
+  }
+
+  /* Deep Cobalt Dark Theme inspired by reference image */
+  [data-theme='dark'] {
+    --bg-color: #060D3D;
+    --text-color: #F4F6FF;
+    --muted-color: rgba(244, 246, 255, 0.65);
+    --border-color: rgba(255, 255, 255, 0.13);
+    --crosshair-color: rgba(255, 255, 255, 0.42);
+    --surface-tint: rgba(255, 255, 255, 0.04);
+  }
+
+  html, body {
+    overflow-x: clip;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+::selection {
+  background-color: #0F359E;
+  color: #FFFFFF;
+}
+
+[data-theme='dark'] ::selection {
+  background-color: #133DA8;
+  color: #FFFFFF;
+}
+
+/* Unified Site Typography using IBM Plex Sans */
+.font-pixel {
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+}
+
+.font-mono-code {
+  font-family: var(--font-sans);
+}
+
+.font-editorial {
+  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+}
+
+.font-signature {
+  font-family: 'Sacramento', cursive;
+}
+
+/* Structural Hairline Grid Line */
+.grid-border-b {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.grid-border-r {
+  border-right: 1px solid var(--border-color);
+}
+
+.grid-border-l {
+  border-left: 1px solid var(--border-color);
+}
+
+.grid-border-t {
+  border-top: 1px solid var(--border-color);
+}
+
+
+/* 3D Perspective Curl effect */
+.perspective-container {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+.curl-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Hide scrollbar for horizontal containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

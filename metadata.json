@@ -1,0 +1,6 @@
+{
+  "name": "Moamen — Product & UI Designer Portfolio",
+  "description": "Portfolio of Moamen, Product & UI Designer. Features interactive 3D WebGL hero, precision architectural grid background, Lenis smooth scrolling, velocity-responsive curling horizontal showcase, and selected case studies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
